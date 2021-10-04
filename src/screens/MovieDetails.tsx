@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
-import {ScrollView} from 'react-native';
 import {useRoute} from '@react-navigation/native';
-import {perfectHeight, perfectWidth} from '../helpers/commonFunctions';
+import {perfectHeight} from '../helpers/commonFunctions';
 import styled from 'styled-components/native';
 import Genres from '../components/Genres';
 import {useDispatch, useSelector} from 'react-redux';
@@ -34,7 +33,7 @@ const MovieDetails = () => {
   }, [dispatch, id]);
 
   return (
-    <ScrollView contentContainerStyle={{marginHorizontal: perfectWidth(20)}}>
+    <ScrollView>
       <UpperContainer>
         <Image source={{uri: 'https://image.tmdb.org/t/p/original/' + uri}} />
         <Title>{title}</Title>
@@ -49,10 +48,7 @@ const MovieDetails = () => {
         ))}
       </Row>
       <Title>Credits</Title>
-      <ScrollView
-        contentContainerStyle={{marginBottom: perfectHeight(10)}}
-        showsHorizontalScrollIndicator={false}
-        horizontal={true}>
+      <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
         {credits?.map(({name, profile_path}: CreditElement, index: number) => (
           <CastMember
             key={index}
@@ -97,3 +93,7 @@ const Row = styled.View`
   flex-wrap: wrap;
   margin-bottom: ${perfectHeight(10)}px;
 `;
+
+const ScrollView = styled.ScrollView.attrs({
+  contentContainerStyle: {marginBottom: perfectHeight(10)},
+})``;
