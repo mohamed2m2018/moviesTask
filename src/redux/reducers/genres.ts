@@ -1,3 +1,4 @@
+import { GenresPayLoad } from './../Model/index';
 import { GET_GENRES_START, GET_GENRES_FAIL, GET_GENRES_SUCCESS } from '../actionTypes';
 
 const initialState = {
@@ -5,7 +6,8 @@ const initialState = {
     fetching: false,
 }
 
-const processGenres = (genres) => {
+
+const processGenres = (genres: { id: string, name: string }[]) => {
     let genresMapping = {}
     genres.forEach((element) => {
         genresMapping = { ...genresMapping, [element.id]: element.name }
@@ -14,7 +16,7 @@ const processGenres = (genres) => {
 
 }
 
-export const genres = (state = initialState, action) => {
+export const genres = (state = initialState, action: GenresPayLoad) => {
     switch (action.type) {
         case GET_GENRES_START:
             return {

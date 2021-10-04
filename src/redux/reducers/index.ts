@@ -1,8 +1,11 @@
 import { genres } from './genres';
 import { combineReducers } from 'redux'
-import movies from './movies'
-
+import { popularMovies, upcomingMovies, topRatedMovies } from './movies'
+import credits from './movieCredit'
 export default combineReducers({
-    movies,
+    popularMovies,
+    upcomingMovies,
+    topRatedMovies,
     genres,
+    credits
 })

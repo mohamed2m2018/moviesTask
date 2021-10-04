@@ -1,9 +1,10 @@
 import axios from 'axios';
+import { Dispatch } from 'redux';
 import { GET_GENRES_START, GET_GENRES_FAIL, GET_GENRES_SUCCESS } from '../actionTypes';
 
 
 const getAllGeneres = () => {
-    return async (dispatch) => {
+    return async (dispatch: Dispatch) => {
         dispatch({
             type: GET_GENRES_START
         });
@@ -17,7 +18,7 @@ const getAllGeneres = () => {
             dispatch({
                 type: GET_GENRES_SUCCESS,
                 payload: {
-                    ...response.data,
+                    ...response.data as {},
                 },
             })
         }
