@@ -1,47 +1,48 @@
-import React from 'react'
-import styled from 'styled-components/native'
-import { colors } from '../constants'
-import { perfectHeight, perfectWidth } from '../helpers/commonFunctions'
-
-
+import React from 'react';
+import styled from 'styled-components/native';
+import {colors} from '../constants';
+import {perfectHeight, perfectWidth} from '../helpers/commonFunctions';
 
 interface Props {
-  selectedIndex: number,
-  setSelectedIndex: (number: number) => void
+  selectedIndex: number;
+  setSelectedIndex: (number: number) => void;
 }
 
-const TabsContainer = ({ selectedIndex, setSelectedIndex }: Props) => {
-  const tabs: string[] = ['Upcoming', 'Popular', 'Top Rated']
+const TabsContainer = ({selectedIndex, setSelectedIndex}: Props) => {
+  const tabs: string[] = ['Upcoming', 'Popular', 'Top Rated'];
   return (
     <Row>
       {tabs?.map((item, index) => {
-        return <Tab selected={index === selectedIndex} onPress={() => {
-          setSelectedIndex(index)
-        }} key={index}>
-          <TabText selected={index === selectedIndex}>
-            {item}
-          </TabText>
-        </Tab>
-      }
-      )}
-
+        return (
+          <Tab
+            selected={index === selectedIndex}
+            onPress={() => {
+              setSelectedIndex(index);
+            }}
+            key={index}>
+            <TabText selected={index === selectedIndex}>{item}</TabText>
+          </Tab>
+        );
+      })}
     </Row>
-  )
-}
+  );
+};
 
-export default TabsContainer
+export default TabsContainer;
 
 const Row = styled.View`
   flex-direction: row;
   margin-bottom: ${perfectHeight(10)}px;
-`
+`;
 const Tab = styled.TouchableOpacity`
   padding: ${perfectWidth(10)}px;
-  background-color:${({ selected }: { selected: boolean }) => selected ? colors.green : colors.grey} ;
+  background-color: ${({selected}: {selected: boolean}) =>
+    selected ? colors.green : colors.grey};
   margin-right: ${perfectWidth(5)}px;
   border-radius: 15px;
-`
+`;
 const TabText = styled.Text`
-  color:${({ selected }: { selected: boolean }) => selected ? colors.white : colors.black} ;
+  color: ${({selected}: {selected: boolean}) =>
+    selected ? colors.white : colors.black};
   font-weight: bold;
-`
+`;
