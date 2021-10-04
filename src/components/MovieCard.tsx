@@ -1,42 +1,42 @@
 import React from 'react'
-import { Dimensions, Text } from 'react-native'
 import styled from 'styled-components/native'
 import { perfectHeight, perfectWidth } from '../helpers/commonFunctions'
 import Genres from './Genres'
 
 interface Props {
-    title: string,
-    date: string,
-    genres: string[],
-    uri: string,
-    rating: string,
+  title: string,
+  date: string,
+  genres: string[],
+  uri: string,
+  rating: string,
+  onPress: () => void
 }
 
-const MovieCard = ({ title, date, uri, rating, genres }: Props) => {
-    return (
-        <OuterContainer>
-            <FirstColumn>
-                <Image resizeMode={'cover'} source={{ uri: 'https://image.tmdb.org/t/p/original/' + uri }} />
-            </FirstColumn>
-            <MiddleColumn>
-                <MainText>{title}</MainText>
-                <DateText>{date}</DateText>
-                <Row>
-                    {
-                        genres.map((name, index) => <Genres key={index} text={name} />)
-                    }
-                </Row>
-            </MiddleColumn>
-            <LastColumn>
-                <RatingText>{rating}%</RatingText>
-            </LastColumn>
-        </OuterContainer>
-    )
+const MovieCard = ({ title, date, uri, rating, genres, onPress }: Props) => {
+  return (
+    <OuterContainer onPress={onPress}>
+      <FirstColumn>
+        <Image resizeMode={'cover'} source={{ uri: 'https://image.tmdb.org/t/p/original/' + uri }} />
+      </FirstColumn>
+      <MiddleColumn>
+        <MainText>{title}</MainText>
+        <DateText>{date}</DateText>
+        <Row>
+          {
+            genres.map((name: string, index: number) => <Genres key={index} text={name} />)
+          }
+        </Row>
+      </MiddleColumn>
+      <LastColumn>
+        <RatingText>{rating}%</RatingText>
+      </LastColumn>
+    </OuterContainer>
+  )
 }
 
 export default MovieCard
 
-const OuterContainer = styled.View`
+const OuterContainer = styled.TouchableOpacity`
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
