@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import styled from 'styled-components/native'
+import { colors } from '../constants'
 import { perfectHeight, perfectWidth } from '../helpers/commonFunctions'
 
 
@@ -20,7 +21,7 @@ export default Genres
 
 
 const OuterContainer = styled.View`
-  background-color: #d8d8d8;
+  background-color: ${colors.grey};
   padding-horizontal: 10px;
   border-radius: 10px;
   margin-bottom: ${perfectHeight(5)}px;

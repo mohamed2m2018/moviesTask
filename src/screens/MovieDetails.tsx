@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { ScrollView } from 'react-native'
-
 import { useRoute } from '@react-navigation/native'
 import { perfectHeight, perfectWidth } from '../helpers/commonFunctions'
 import styled from 'styled-components/native'
@@ -9,7 +8,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getMovieCredits } from '../redux/actions/moviesActions'
 import CastMember from '../components/CastMember'
 import { RouteProp } from '@react-navigation/native';
-import { RootState } from '../redux/Model'
+import { CreditElement, RootState } from '../redux/Model'
+import { colors } from '../constants'
 
 type ParamList = {
   MovieDetails: {
@@ -26,7 +26,7 @@ const MovieDetails = () => {
 
   const { params: { title, uri, rating, overview, genres, id } } = useRoute<RouteProp<ParamList, 'MovieDetails'>>()
   const dispatch = useDispatch()
-  const credits = useSelector<RootState>(state => state.credits.credits)
+  const { credits } = useSelector((state: RootState) => state.credits)
 
   useEffect(() => {
     dispatch(getMovieCredits(id))
@@ -51,7 +51,7 @@ const MovieDetails = () => {
       </Row>
       <Title>Credits</Title>
       <ScrollView contentContainerStyle={{ marginBottom: perfectHeight(10) }} showsHorizontalScrollIndicator={false} horizontal={true}>
-        {credits?.map(({ name, profile_path }: { name: string, profile_path: string }, index: number) =>
+        {credits?.map(({ name, profile_path }: CreditElement, index: number) =>
           <CastMember key={index} name={name}
             uri={'https://image.tmdb.org/t/p/original/' + profile_path}
           />
@@ -83,7 +83,7 @@ const Title = styled.Text`
   margin-bottom: ${perfectHeight(10)}px;
 `
 const Rating = styled.Text`
-  color: #73F340;
+  color: ${colors.green};
   font-size: 30px;
   font-weight: bold;
 `

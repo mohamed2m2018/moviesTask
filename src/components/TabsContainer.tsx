@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React from 'react'
+import styled from 'styled-components/native'
+import { colors } from '../constants'
 import { perfectHeight, perfectWidth } from '../helpers/commonFunctions'
 
 
@@ -36,11 +37,11 @@ const Row = styled.View`
 `
 const Tab = styled.TouchableOpacity`
   padding: ${perfectWidth(10)}px;
-  background-color:${({ selected }) => selected ? '#73F340' : '#d8d8d8'} ;
+  background-color:${({ selected }: { selected: boolean }) => selected ? colors.green : colors.grey} ;
   margin-right: ${perfectWidth(5)}px;
   border-radius: 15px;
 `
 const TabText = styled.Text`
-  color:${({ selected }) => selected ? '#fff' : '#000'} ;
+  color:${({ selected }: { selected: boolean }) => selected ? colors.white : colors.black} ;
   font-weight: bold;
 `

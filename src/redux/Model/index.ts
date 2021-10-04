@@ -14,11 +14,13 @@ export interface GenresReducer {
     fetching: boolean,
 }
 
+export interface CreditElement {
+    name: string, profile_path: string
+}
+
 export interface MovieCreditReducer {
-    credits: {
-        credits: Object[],
-        fetching: boolean,
-    }
+    credits: CreditElement[],
+    fetching: boolean,
 }
 
 export interface GenresPayLoad {

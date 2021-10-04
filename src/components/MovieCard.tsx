@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/native'
+import { colors } from '../constants'
 import { perfectHeight, perfectWidth } from '../helpers/commonFunctions'
 import Genres from './Genres'
 
@@ -81,7 +82,7 @@ const DateText = styled.Text`
 `
 
 const RatingText = styled.Text`
-  color: #73F340;
+  color: ${colors.green};
   font-size: 20px;
   font-weight: bold;
 `
