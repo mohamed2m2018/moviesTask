@@ -7,6 +7,7 @@ import MovieCard from './MovieCard';
 import {GenresReducer, RootState} from '../redux/Model';
 import styled from 'styled-components/native';
 import {colors} from '../constants';
+import {perfectHeight} from '../helpers/commonFunctions';
 
 interface Props {
   movies: Object[];
@@ -86,7 +87,7 @@ const MoviesList = ({movies, hasMore, fetching, action, page}: Props) => {
 };
 
 const ActivityIndicator = styled.ActivityIndicator`
-  margin-top: 10;
+  margin-top: ${perfectHeight(10)}px;
 `;
 
 export default React.memo(MoviesList);
