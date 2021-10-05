@@ -35,11 +35,12 @@ const Row = styled.View`
   margin-bottom: ${perfectHeight(10)}px;
 `;
 const Tab = styled.TouchableOpacity`
-  padding: ${perfectWidth(10)}px;
+  padding-vertical: ${perfectWidth(10)}px;
+  padding-horizontal: ${perfectWidth(20)}px;
   background-color: ${({selected}: {selected: boolean}) =>
     selected ? colors.green : colors.grey};
   margin-right: ${perfectWidth(5)}px;
-  border-radius: 15px;
+  border-radius: 20px;
 `;
 const TabText = styled.Text`
   color: ${({selected}: {selected: boolean}) =>

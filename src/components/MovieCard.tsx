@@ -77,10 +77,12 @@ const MainText = styled.Text`
   font-size: 20px;
   margin-bottom: 10px;
   font-weight: bold;
+  color: ${colors.black};
 `;
 const DateText = styled.Text`
   font-size: 15px;
   margin-bottom: 20px;
+  color: ${colors.black};
 `;
 
 const RatingText = styled.Text`

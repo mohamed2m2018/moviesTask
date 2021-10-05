@@ -75,7 +75,6 @@ export default MovieDetails;
 const UpperContainer = styled.View`
   justify-content: center;
   align-items: center;
-  margin-top: ${perfectHeight(50)}px;
 `;
 const Image = styled.Image`
   width: ${perfectHeight(140)}px;
@@ -87,11 +86,13 @@ const Title = styled.Text`
   font-weight: bold;
   font-size: 23px;
   margin-bottom: ${perfectHeight(10)}px;
+  color: ${colors.black};
 `;
 const Rating = styled.Text`
   color: ${colors.green};
   font-size: 30px;
   font-weight: bold;
+  color: ${colors.black};
 `;
 const Description = styled.Text`
   font-size: 15px;
@@ -111,6 +112,5 @@ const ScrollView = styled.ScrollView.attrs({
 `;
 
 const CastScrollView = styled.ScrollView`
-  width: 105%;
   margin-bottom: ${perfectHeight(50)}px;
 `;

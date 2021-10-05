@@ -1,5 +1,4 @@
 import React from 'react';
-import {Text} from 'react-native';
 import styled from 'styled-components/native';
 import {colors} from '../constants';
 import {perfectHeight, perfectWidth} from '../helpers/commonFunctions';
@@ -24,4 +23,8 @@ const OuterContainer = styled.View`
   border-radius: 10px;
   margin-bottom: ${perfectHeight(5)}px;
   margin-right: ${perfectWidth(5)}px;
+`;
+
+const Text = styled.Text`
+  color: ${colors.black};
 `;

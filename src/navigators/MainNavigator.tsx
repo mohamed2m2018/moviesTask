@@ -23,7 +23,12 @@ const MainNavigator = () => {
             headerTintColor: colors.black,
             headerBackTitleVisible: false,
             headerShadowVisible: false,
-            headerTransparent: true,
+            headerStyle: {
+              backgroundColor: colors.background,
+              elevation: 0,
+              shadowOpacity: 0,
+              borderBottomWidth: 0,
+            },
           })}
         />
       </Stack.Navigator>

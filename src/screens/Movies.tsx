@@ -82,11 +82,12 @@ const SafeAreaView = styled.SafeAreaView`
 `;
 const Title = styled.Text`
   align-self: flex-start;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
   margin-left: ${perfectWidth(20)}px;
   margin-bottom: ${perfectHeight(10)}px;
   margin-top: ${perfectHeight(10)}px;
+  color: ${colors.black};
 `;
 
 export default Movies;
