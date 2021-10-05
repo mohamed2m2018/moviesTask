@@ -21,7 +21,7 @@ export default CastMember;
 const Container = styled.View`
   align-items: center;
   justify-content: center;
-  margin-left: ${perfectWidth(10)}px;
+  margin-right: ${perfectWidth(10)}px;
 `;
 const Image = styled.Image`
   width: ${perfectWidth(70)}px;
