@@ -6,7 +6,7 @@ import {getAllGeneres} from '../redux/actions/genresActions';
 import MovieCard from './MovieCard';
 import {GenresReducer, RootState} from '../redux/Model';
 import styled from 'styled-components/native';
-import {colors} from '../constants';
+import {colors, testIds} from '../constants';
 import {perfectHeight} from '../helpers/commonFunctions';
 
 interface Props {
@@ -75,6 +75,7 @@ const MoviesList = ({movies, hasMore, fetching, action, page}: Props) => {
         item?.id + index?.toString()
       }
       onEndReachedThreshold={1}
+      testID={testIds.MOVIES_FLATLIST}
       onEndReached={handleLoadMore}
       ListFooterComponent={() => {
         if (fetching) {

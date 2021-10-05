@@ -5,3 +5,11 @@ export const colors = {
   black: '#000',
   background: '#F6F6F8',
 };
+
+export const testIds = {
+  MOVIE_CARD_TITLE: 'MOVIE_CARD_TITLE',
+  MOVIE_CARD_DATE: 'MOVIE_CARD_DATE',
+  MOVIE_CARD_RATING: 'MOVIE_CARD_RATING',
+  MOVIE_CARD_TOUCHABLE: 'MOVIE_CARD_TOUCHABLE',
+  MOVIES_FLATLIST: 'MOVIES_FLATLIST',
+};

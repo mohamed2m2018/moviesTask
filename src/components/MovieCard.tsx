@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {colors} from '../constants';
+import {colors, testIds} from '../constants';
 import {perfectHeight, perfectWidth} from '../helpers/commonFunctions';
 import Genres from './Genres';
 
@@ -15,7 +15,7 @@ interface Props {
 
 const MovieCard = ({title, date, uri, rating, genres, onPress}: Props) => {
   return (
-    <OuterContainer onPress={onPress}>
+    <OuterContainer testID={testIds.MOVIE_CARD_TOUCHABLE} onPress={onPress}>
       <FirstColumn>
         <Image
           resizeMode={'cover'}
@@ -23,8 +23,8 @@ const MovieCard = ({title, date, uri, rating, genres, onPress}: Props) => {
         />
       </FirstColumn>
       <MiddleColumn>
-        <MainText>{title}</MainText>
-        <DateText>{date}</DateText>
+        <MainText testID={testIds.MOVIE_CARD_TITLE}>{title}</MainText>
+        <DateText testID={testIds.MOVIE_CARD_DATE}>{date}</DateText>
         <Row>
           {genres.map((name: string, index: number) => (
             <Genres key={index} text={name} />
@@ -32,7 +32,7 @@ const MovieCard = ({title, date, uri, rating, genres, onPress}: Props) => {
         </Row>
       </MiddleColumn>
       <LastColumn>
-        <RatingText>{rating}%</RatingText>
+        <RatingText testID={testIds.MOVIE_CARD_RATING}>{rating}%</RatingText>
       </LastColumn>
     </OuterContainer>
   );

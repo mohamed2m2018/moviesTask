@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie card renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderRadius": 10,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginVertical": 20.523076923076925,
+      "opacity": 1,
+      "paddingBottom": 20.523076923076925,
+      "paddingLeft": 20.523076923076925,
+      "paddingRight": 20.523076923076925,
+      "paddingTop": 20.523076923076925,
+      "width": 700,
+    }
+  }
+  testID="MOVIE_CARD_TOUCHABLE"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "width": 240,
+        },
+      ]
+    }
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "https://image.tmdb.org/t/p/original//iOPXG7q6ZqxSFp2iSY2CvgeRXyC.jpg",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "borderRadius": 10,
+            "height": 246.27692307692305,
+            "width": 200,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "width": 320,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "marginBottom": 10,
+          },
+        ]
+      }
+      testID="MOVIE_CARD_TITLE"
+    >
+      No time to die
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 15,
+            "marginBottom": 20,
+          },
+        ]
+      }
+      testID="MOVIE_CARD_DATE"
+    >
+      29-10-2021
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#d8d8d8",
+              "borderRadius": 10,
+              "marginBottom": 10.261538461538462,
+              "marginRight": 10,
+              "paddingHorizontal": 10,
+            },
+          ]
+        }
+      >
+        <Text>
+          Thriller
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#d8d8d8",
+              "borderRadius": 10,
+              "marginBottom": 10.261538461538462,
+              "marginRight": 10,
+              "paddingHorizontal": 10,
+            },
+          ]
+        }
+      >
+        <Text>
+          Action
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "justifyContent": "flex-end",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#73F340",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+        ]
+      }
+      testID="MOVIE_CARD_RATING"
+    >
+      79
+      %
+    </Text>
+  </View>
+</View>
+`;

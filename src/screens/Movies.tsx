@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {Text, StatusBar} from 'react-native';
+import {StatusBar} from 'react-native';
 import {useSelector} from 'react-redux';
 import styled from 'styled-components/native';
 import MoviesList from '../components/MoviesList';
 import TabsContainer from '../components/TabsContainer';
 import {colors} from '../constants';
+import {perfectHeight, perfectWidth} from '../helpers/commonFunctions';
 import {
   getAllPopularMovies,
   getTopRatedMovies,
@@ -37,16 +38,7 @@ const Movies = () => {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Text
-        style={{
-          alignSelf: 'flex-start',
-          fontSize: 25,
-          fontWeight: 'bold',
-          marginStart: 20,
-          marginBottom: 10,
-        }}>
-        Movies
-      </Text>
+      <Title>Movies</Title>
       <TabsContainer
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
@@ -87,6 +79,13 @@ const SafeAreaView = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
   align-items: center;
+`;
+const Title = styled.Text`
+  align-self: flex-start;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: ${perfectWidth(20)}px;
+  margin-bottom: ${perfectHeight(10)}px;
 `;
 
 export default Movies;

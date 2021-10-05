@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie List renders correctly 1`] = `
+<RCTScrollView
+  ListFooterComponent={[Function]}
+  data={
+    Array [
+      Object {
+        "adult": false,
+        "backdrop_path": "/kcvKEvTWqIGMjpVJdbDVRHdIt4C.jpg",
+        "genre_ids": Array [
+          12,
+          28,
+          53,
+        ],
+        "id": 370172,
+        "original_language": "en",
+        "original_title": "No Time to Die",
+        "overview": "Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+        "popularity": 791.973,
+        "poster_path": "/iOPXG7q6ZqxSFp2iSY2CvgeRXyC.jpg",
+        "release_date": "2021-09-29",
+        "title": "No Time to Die",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 225,
+      },
+      Object {
+        "adult": false,
+        "backdrop_path": "/5WPKkfVcMtQ0YOvSovbmxvNq3i1.jpg",
+        "genre_ids": Array [
+          27,
+          53,
+        ],
+        "id": 565028,
+        "original_language": "en",
+        "original_title": "Candyman",
+        "overview": "Anthony and his partner move into a loft in the now gentrified Cabrini-Green, and after a chance encounter with an old-timer exposes Anthony to the true story behind Candyman, he unknowingly opens a door to a complex past that unravels his own sanity and unleashes a terrifying wave of violence.",
+        "popularity": 581.797,
+        "poster_path": "/dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+        "release_date": "2021-08-25",
+        "title": "Candyman",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 408,
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onEndReached={[Function]}
+  onEndReachedThreshold={1}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  testID="MOVIES_FLATLIST"
+  viewabilityConfigCallbackPairs={Array []}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 10,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginVertical": 20.523076923076925,
+            "opacity": 1,
+            "paddingBottom": 20.523076923076925,
+            "paddingLeft": 20.523076923076925,
+            "paddingRight": 20.523076923076925,
+            "paddingTop": 20.523076923076925,
+            "width": 700,
+          }
+        }
+        testID="MOVIE_CARD_TOUCHABLE"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "width": 240,
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="cover"
+            source={
+              Object {
+                "uri": "https://image.tmdb.org/t/p/original//iOPXG7q6ZqxSFp2iSY2CvgeRXyC.jpg",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 10,
+                  "height": 246.27692307692305,
+                  "width": 200,
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "width": 320,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "marginBottom": 10,
+                },
+              ]
+            }
+            testID="MOVIE_CARD_TITLE"
+          >
+            No Time to Die
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 15,
+                  "marginBottom": 20,
+                },
+              ]
+            }
+            testID="MOVIE_CARD_DATE"
+          >
+            2021-09-29
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderRadius": 10,
+                    "marginBottom": 10.261538461538462,
+                    "marginRight": 10,
+                    "paddingHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderRadius": 10,
+                    "marginBottom": 10.261538461538462,
+                    "marginRight": 10,
+                    "paddingHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderRadius": 10,
+                    "marginBottom": 10.261538461538462,
+                    "marginRight": 10,
+                    "paddingHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "justifyContent": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#73F340",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                },
+              ]
+            }
+            testID="MOVIE_CARD_RATING"
+          >
+            73
+            %
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 10,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginVertical": 20.523076923076925,
+            "opacity": 1,
+            "paddingBottom": 20.523076923076925,
+            "paddingLeft": 20.523076923076925,
+            "paddingRight": 20.523076923076925,
+            "paddingTop": 20.523076923076925,
+            "width": 700,
+          }
+        }
+        testID="MOVIE_CARD_TOUCHABLE"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "width": 240,
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="cover"
+            source={
+              Object {
+                "uri": "https://image.tmdb.org/t/p/original//dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 10,
+                  "height": 246.27692307692305,
+                  "width": 200,
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "width": 320,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "marginBottom": 10,
+                },
+              ]
+            }
+            testID="MOVIE_CARD_TITLE"
+          >
+            Candyman
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 15,
+                  "marginBottom": 20,
+                },
+              ]
+            }
+            testID="MOVIE_CARD_DATE"
+          >
+            2021-08-25
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderRadius": 10,
+                    "marginBottom": 10.261538461538462,
+                    "marginRight": 10,
+                    "paddingHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#d8d8d8",
+                    "borderRadius": 10,
+                    "marginBottom": 10.261538461538462,
+                    "marginRight": 10,
+                    "paddingHorizontal": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+                "justifyContent": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#73F340",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                },
+              ]
+            }
+            testID="MOVIE_CARD_RATING"
+          >
+            65
+            %
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+    />
+  </View>
+</RCTScrollView>
+`;
