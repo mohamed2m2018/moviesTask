@@ -73,6 +73,7 @@ exports[`Movie card renders correctly 1`] = `
       style={
         Array [
           Object {
+            "color": "#000",
             "fontSize": 20,
             "fontWeight": "bold",
             "marginBottom": 10,
@@ -87,6 +88,7 @@ exports[`Movie card renders correctly 1`] = `
       style={
         Array [
           Object {
+            "color": "#000",
             "fontSize": 15,
             "marginBottom": 20,
           },
@@ -119,7 +121,15 @@ exports[`Movie card renders correctly 1`] = `
           ]
         }
       >
-        <Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+              },
+            ]
+          }
+        >
           Thriller
         </Text>
       </View>
@@ -136,7 +146,15 @@ exports[`Movie card renders correctly 1`] = `
           ]
         }
       >
-        <Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+              },
+            ]
+          }
+        >
           Action
         </Text>
       </View>
@@ -156,7 +174,7 @@ exports[`Movie card renders correctly 1`] = `
       style={
         Array [
           Object {
-            "color": "#73F340",
+            "color": "#59C14C",
             "fontSize": 20,
             "fontWeight": "bold",
           },
