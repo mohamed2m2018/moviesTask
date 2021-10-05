@@ -1,9 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-
 import Movies from '../screens/Movies';
 import MovieDetails from '../screens/MovieDetails';
+import {colors} from '../constants';
 
 const MainNavigator = () => {
   const Stack = createStackNavigator();
@@ -18,7 +18,13 @@ const MainNavigator = () => {
         <Stack.Screen
           name={'MovieDetails'}
           component={MovieDetails}
-          options={{headerShown: false}}
+          options={() => ({
+            title: '',
+            headerTintColor: colors.black,
+            headerBackTitleVisible: false,
+            headerShadowVisible: false,
+            headerTransparent: true,
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

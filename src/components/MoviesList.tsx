@@ -71,6 +71,7 @@ const MoviesList = ({movies, hasMore, fetching, action, page}: Props) => {
     <FlatList
       data={movies as []}
       renderItem={renderItem}
+      showsVerticalScrollIndicator={false}
       keyExtractor={(item: {id: number}, index: number) =>
         item?.id + index?.toString()
       }

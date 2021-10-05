@@ -86,6 +86,7 @@ const Title = styled.Text`
   font-weight: bold;
   margin-left: ${perfectWidth(20)}px;
   margin-bottom: ${perfectHeight(10)}px;
+  margin-top: ${perfectHeight(10)}px;
 `;
 
 export default Movies;

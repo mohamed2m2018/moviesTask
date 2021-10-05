@@ -9,6 +9,7 @@ import CastMember from '../components/CastMember';
 import {RouteProp} from '@react-navigation/native';
 import {CreditElement, RootState} from '../redux/Model';
 import {colors} from '../constants';
+import {ActivityIndicator} from 'react-native';
 
 type ParamList = {
   MovieDetails: {
@@ -26,14 +27,14 @@ const MovieDetails = () => {
     params: {title, uri, rating, overview, genres, id},
   } = useRoute<RouteProp<ParamList, 'MovieDetails'>>();
   const dispatch = useDispatch();
-  const {credits} = useSelector((state: RootState) => state.credits);
+  const {credits, fetching} = useSelector((state: RootState) => state.credits);
 
   useEffect(() => {
     dispatch(getMovieCredits(id));
   }, [dispatch, id]);
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <UpperContainer>
         <Image source={{uri: 'https://image.tmdb.org/t/p/original/' + uri}} />
         <Title>{title}</Title>
@@ -48,15 +49,23 @@ const MovieDetails = () => {
         ))}
       </Row>
       <Title>Credits</Title>
-      <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
-        {credits?.map(({name, profile_path}: CreditElement, index: number) => (
-          <CastMember
-            key={index}
-            name={name}
-            uri={'https://image.tmdb.org/t/p/original/' + profile_path}
-          />
-        ))}
-      </ScrollView>
+      {fetching ? (
+        <ActivityIndicator color={colors.black} />
+      ) : (
+        <CastScrollView
+          showsHorizontalScrollIndicator={false}
+          horizontal={true}>
+          {credits?.map(
+            ({name, profile_path}: CreditElement, index: number) => (
+              <CastMember
+                key={index}
+                name={name}
+                uri={'https://image.tmdb.org/t/p/original/' + profile_path}
+              />
+            ),
+          )}
+        </CastScrollView>
+      )}
     </ScrollView>
   );
 };
@@ -96,4 +105,12 @@ const Row = styled.View`
 
 const ScrollView = styled.ScrollView.attrs({
   contentContainerStyle: {marginBottom: perfectHeight(10)},
-})``;
+})`
+  background-color: ${colors.background};
+  padding: ${perfectHeight(15)}px;
+`;
+
+const CastScrollView = styled.ScrollView`
+  width: 105%;
+  margin-bottom: ${perfectHeight(50)}px;
+`;
